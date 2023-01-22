@@ -1,0 +1,272 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    align-items: center;
+}
+
+.container2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.logo {
+    color: aliceblue;
+    padding-left: 15px;
+    margin: 0;
+}
+
+
+.nav {
+    position: fixed;
+    background-color: #555;
+    left: 0;
+    right: 0;
+    top: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav.active {
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    opacity: 0.6;
+}
+
+.nav.active a, .nav.active .logo {
+    color: #555;
+}
+
+.nav .container2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav h1 {
+    font-size: 24px;
+}
+
+.nav.active h1 {
+    font-size: 14px;
+}
+
+.nav a.current {
+    color: palevioletred;
+}
+
+.nav a:hover {
+    font-size: 110%;
+}
+
+.nav.active .container2 {
+    padding: 10px;
+}
+
+.nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 7px 15px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 40px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.map-screen {
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
+    max-height: 700px;
+    position: absolute;
+    background-color: aliceblue;
+    border-radius: 16px;
+    top: 50px;
+    cursor: pointer;
+    transform: scale(0, 0);
+    transition: transform 0.4s ease-in-out;
+}
+
+.map {
+    width: 90%;
+    min-height: 540px;
+    top: 20px;
+    border-radius: 12px;
+}
+
+.lap-data {
+    width: 90%;
+    margin: 20px;
+}
+
+.map-screen.active {
+    transform: scale(1, 1);
+}
+
+@media (max-width: 900px) {
+    .map-screen {
+        width: 500px;
+        height: 350px;
+        top: 100px;
+    }
+}
+
+.plot {
+    width: 90%;
+    height: 300px;
+    border-radius: 12px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* justify-content: center; */
+}
+
+.left-container {
+    width: 20%;
+    border: solid 3px salmon;
+}
+
+.right-container {
+    display: flex;
+    width: 80%;
+    border: solid 3px salmon;
+    flex-wrap: wrap;
+    padding: 20px;
+    align-items: center;
+}
+
+.record {
+    background-color: rgb(185, 204, 243);
+    padding: 0 10px;
+    margin: 10px 20px;
+    border-radius: 8px;
+    border: 3px solid rgb(17, 21, 224); 
+    transition: all 0.6s ease;
+    cursor: pointer;
+    height: 330px;
+}
+
+.record h3 {
+    margin: 5px;
+    text-align: left;
+    color: brown;
+    text-align: center;
+}
+
+.record .date {
+    font-size: 22px;
+    text-decoration-line: underline;
+    color: rgb(54, 7, 52);
+}
+
+.record:hover {
+    border: 3px solid rgb(241, 14, 166);
+    border-radius: 14px;
+}
+
+.record:hover .record-data {
+    border-color: rgb(68, 97, 24);
+    border-radius: 14px;
+    
+}
+
+.record:hover .date {
+    color: rgb(67, 110, 110);
+}
+
+
+.record-data {
+    border: 2px solid rgb(98, 96, 244);
+    border-radius: inherit;
+    margin: 15px 5px;
+    color: rgb(29, 24, 21);
+    width: 250px;
+    transition: inherit;
+}
+
+.record-data p {
+    padding: 5px;
+    font-size: 18px;
+    margin: 5px;
+}
+
+.info {
+    display: flex;
+    justify-content: space-between;
+}
+
+#laps {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#laps td, #laps th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+
+/* #laps tr:nth-child(even){background-color: #f2f2f2;} */
+
+#laps tr:hover {background-color: #ddd;}
+
+#laps th {
+padding-top: 12px;
+padding-bottom: 12px;
+text-align: left;
+background-color: #9704aa;
+color: white;
+}
+
+.best {
+    background-color: #08ac3f;
+}
+
+.worst {
+    background-color: #da6c8d;
+}
+
+.month {
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #9704aa;
+}
+
+.month h2 {
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    text-align: center;
+    
+    margin-top: 40px;
+}
+
+.month table {
+    margin-bottom: 20px;
+    padding: 0;
+    font-size: 25px;
+    width: 60%;
+}
+
+
+

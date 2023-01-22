@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+     integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+     integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+     crossorigin=""></script>
+     <script src="https://cdn.plot.ly/plotly-2.16.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Test Pictures</title>
+</head>
+<body>
+    <nav class="nav">
+        <div class="container2">
+            <h1 class="logo"><a href="\index.html"></a>Trainings</h1>
+            <ul>
+                <li><a href="#" class="current">Home</a></li>
+                <li><a href="login\login.html">Login</a></li>
+                <li><a href="#">Fuck</a></li>
+                <li><a href="#">Services</a></li>
+            </ul>
+        </div>
+    </nav>
+    <h1>Trainigs</h1>
+
+    <div class="map-screen">
+        <div class="map" id="map"></div>
+        <!-- <div class="plot">
+            <div id="tester" style="width:1100px;height:300px;"></div>
+        </div>
+        <div id="plot"></div> -->
+        <div class="lap-data">
+            <h1>Laps</h1>
+            <table id="laps">
+                <tr>
+                    <th>Km</th>
+                    <th>Time</th>
+                    <th>Speed</th>
+                    <th>Average Speed</th>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="left-container">
+            <input type="month" id="month">
+            <label for="month">Введите месяц и год</label>
+            <button id="break">Сброс</button>
+        </div>
+        <div class="right-container"></div>
+    </div>
+
+<script src="script.js"></script>    
+</body>
+</html>
+
+
+#TODO add left panel for navigating params of track
